@@ -1,0 +1,6 @@
+@SaiketBackendAPI_HostAddress = http://localhost:5261
+
+GET {{SaiketBackendAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

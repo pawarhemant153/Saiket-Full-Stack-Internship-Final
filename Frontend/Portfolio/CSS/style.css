@@ -1,0 +1,221 @@
+/* ===================== GLOBAL STYLES ===================== */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 90px 0;
+}
+
+/* ===================== NAVBAR ===================== */
+.glass-nav {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+}
+
+/* ===================== HERO SECTION ===================== */
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    width: 180px;
+    border-radius: 50%;
+    border: 5px solid rgba(255,255,255,0.8);
+    transition: transform 0.4s;
+}
+
+.profile-img:hover {
+    transform: scale(1.08);
+}
+
+/* ===================== SECTION GRADIENT BACKGROUNDS ===================== */
+.section-gradient-1 {
+    background: linear-gradient(120deg, #fdfbfb, #ebedee);
+}
+
+.section-gradient-2 {
+    background: linear-gradient(120deg, #e0c3fc, #8ec5fc);
+}
+
+.section-gradient-3 {
+    background: linear-gradient(120deg, #f093fb, #f5576c);
+    color: white;
+}
+
+.section-gradient-4 {
+    background: linear-gradient(120deg, #43e97b, #38f9d7);
+}
+
+.section-gradient-5 {
+    background: linear-gradient(120deg, #30cfd0, #330867);
+    color: white;
+}
+
+/* ===================== SECTION TITLES ===================== */
+.section-title {
+    text-align: center;
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* ===================== REUSABLE GLASS CARD ===================== */
+.glass-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 35px;
+    border-radius: 22px;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.35);
+    transition: all 0.45s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-14px) scale(1.04);
+    box-shadow: 0 35px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* ===================== PROJECT CARDS ===================== */
+.project-card {
+    /* Inherits .glass-card styles via HTML class */
+    position: relative;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.25); /* darker tint for readability */
+    color: #ffffff;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+    opacity: 0.1;
+    transform: rotate(25deg);
+    z-index: 0;
+    border-radius: 22px;
+    transition: all 0.4s ease;
+}
+
+.project-card * {
+    position: relative;
+    z-index: 1;
+}
+
+.project-card:hover::before {
+    opacity: 0.25;
+    transform: rotate(25deg) scale(1.05);
+}
+
+.project-card h5,
+.project-card p {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* ===================== SKILL CARDS ===================== */
+.skill-card {
+}
+
+/* ===================== CERTIFICATION & TRAINING CARDS ===================== */
+.cert-card,
+.training-card {
+    /* Inherits .glass-card styles via HTML class */
+    background: rgba(255,255,255,0.85);
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.cert-card:hover,
+.training-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 30px 55px rgba(0,0,0,0.25);
+}
+
+.cert-icon {
+    font-size: 3rem;
+    color: #5f2c82;
+    margin-bottom: 15px;
+}
+
+.section-gradient-4 .cert-card {
+    background: rgba(255,255,255,0.9);
+}
+
+/* ===================== CONTACT CARD ===================== */
+.contact-card {
+    /* Base glass styling */
+    background: rgba(255,255,255,0.15);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+
+    /* Layout */
+    height: 100%;   /* makes both cards equal height */
+}
+
+/* Text & icon styles */
+.contact-card p {
+    font-size: 1.1rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.contact-card i {
+    font-size: 1.4rem;
+    color: #ffd86f;
+}
+
+.contact-card a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+/* Form inside contact card */
+.contact-card h5 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contact-card input,
+.contact-card textarea {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#formError {
+    font-weight: 500;
+    color: red;
+}
+
+/* ===================== GLOBAL CARD HOVER EFFECTS ===================== */
+.skill-card,
+.project-card,
+.cert-card,
+.training-card,
+.contact-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ===================== FOOTER ===================== */
+.footer {
+    background: #0d0d0d;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
