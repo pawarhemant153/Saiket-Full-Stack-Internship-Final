@@ -42,7 +42,7 @@ Screenshots/
 
 ---
 
-## 🧰 Tools Used
+##  Tools Used
 - Visual Studio
 - SQL Server Management Studio (SSMS)
 - Swagger UI
@@ -50,7 +50,7 @@ Screenshots/
 
 ---
 
-## 🧾 Internship Completed By
+##  Internship Completed By
 **Name:** Hemant Patangrao Pawar  
 **Qualification:** B.E Computer Engineering  
 
